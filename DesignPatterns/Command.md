@@ -8,3 +8,68 @@
   - Requests need to be specified, queued, and executed at variant times or in variant orders.
   - A history of requests is needed.
   - The invoker should be decoupled from the object handling the invocation.
+
+<br>
+
+### How to Use (Example)
+- **Command Interface**
+```
+public interface Command {
+    public void execute();
+}
+```
+
+- **Implementing a command**
+```
+public class MyCommand implements Command {
+    MyReceiver myRecevier;
+
+    public MyCommand(MyReceiver myReceiver) {
+        this.myReceiver = myReceiver;
+    }
+
+    public void execute() {
+        // Call a method of myReceiver
+        // ex. myReceiver.work();
+    }
+}
+```
+
+- **Building Invoker**
+```
+public class MyInvoker {
+    Command slot;
+
+    public MyInvoker() {}
+
+    public void setCommand(Command command) {
+        slot = command;
+    }
+
+    // Use your own method
+    public void buttonPressed() {
+        slot.execute();
+    }
+}
+```
+
+- **Client Program**
+```
+public class Main {
+    public static void main(String[] args) {
+        // Create invoker
+        MyInvoker myInvoker = new MyInvoker();
+
+        // Create receiver
+        MyReceiver myReceiver = new MyRecevier();
+
+        // Create command
+        MyCommand myCommand = new MyCommand(myReceiver);
+
+        // linking the invoker with the command
+        myInvoker.setCommand(myCommand);
+
+        myInvoker.buttonPressed();
+    }
+}
+```
