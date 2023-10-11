@@ -9,3 +9,5 @@
   - Families of objects must be used together.
   - Libraries must be published without exposing implementation details.
   - Concrete classes should be decoupled from clients.
+- **Characteristics**
+  - Delegates object creation to a factory object.
