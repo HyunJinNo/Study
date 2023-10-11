@@ -10,3 +10,5 @@
   - State changes in one or more objects should trigger behavior in other objects
   - Broadcasting capabilities are required.
   - An understanding exists that objects wiil be blind to the expense of notification
+- **Definition**
+  - It defines a **one-to-many dependency** between objects so that when one object changes state, all of its dependents are notified and updated automatically.
