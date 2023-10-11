@@ -61,7 +61,7 @@ public class Main {
         MyInvoker myInvoker = new MyInvoker();
 
         // Create receiver
-        MyReceiver myReceiver = new MyRecevier();
+        MyReceiver myReceiver = new MyReceiver();
 
         // Create command
         MyCommand myCommand = new MyCommand(myReceiver);
