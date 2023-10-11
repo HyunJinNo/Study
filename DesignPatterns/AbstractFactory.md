@@ -11,4 +11,19 @@
   - Concrete classes should be decoupled from clients.
 - **Characteristics**
   - Delegates object creation to a factory object.
-  - Uses **composition and delegation**.
+  - Uses **composition and delegation.**
+
+<br>
+
+### Participants
+- **AbstractFactory**
+  - Declares an interface for operations that create abstract product objects.
+- **ConcreteFactory**
+  - Implements the operations to create product objects.
+- **AbstractProduct**
+  - Declares an interface for a type of product object.
+- **ConcreteProduct**
+  - Defines a product object to be created by the corresponding concrete factory.
+  - Implements the AbstractProduct interface.
+- **Client**
+  - **Uses only interfaces** declared by AbstractFactory and AbstractProduct classes.
