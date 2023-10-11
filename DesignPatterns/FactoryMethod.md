@@ -7,3 +7,5 @@
   - A class will not know what classes it will be required to create.
   - Subclasses may specify what objects should be created.
   - Parent classes wish to defer creation to their subclasses.
+- **Characteristics**
+  - Uses **inheritance** to decide the object to be instantiated.
