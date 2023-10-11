@@ -27,3 +27,50 @@
   - Implements the AbstractProduct interface.
 - **Client**
   - **Uses only interfaces** declared by AbstractFactory and AbstractProduct classes.
+ 
+<br>
+
+### How to Use (Example)
+- **Abstract Factory**
+```
+public interface IngredientFactory {
+    public IngredientA createIngredientA();
+    public IngredientB createIngredientB();
+    public IngredientC createIngredientC();
+}
+```
+
+- **Concrete Factory**
+```
+public class MyIngredientFactory implements IngredientFactory {
+    public IngredientA createIngredientA() {
+        return new MyIngredientA();
+    }
+
+    public IngredientB createIngredientB() {
+        return new MyIngredientB();
+    }
+
+    public IngredientC createIngredientC() {
+        return new MyIngredientC();
+    }
+}
+```
+
+- **Abstract Product**
+```
+public abstract class Product {
+    IngredientA ingredientA;
+    IngredientB ingredientB;
+    IngredientC ingredientC;
+
+    public abstract void prepare();
+}
+```
+
+- **Concrete Product**
+```
+public class MyProduct extends Product {
+    
+}
+```
