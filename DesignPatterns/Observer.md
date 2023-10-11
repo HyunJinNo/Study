@@ -12,3 +12,56 @@
   - An understanding exists that objects wiil be blind to the expense of notification
 - **Definition**
   - It defines a **one-to-many dependency** between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+<br>
+
+### How to Use
+- Observable side
+```
+import java.util.Observable;
+import java.util.Observer;
+
+public class MyData extends Observable {
+    private int number;
+
+    public MyData() {}
+
+    public void measurementsChanged() {
+        setChanged();
+        notifyObservers();
+    }
+
+    public void setMeasurements(int number) {
+        this.number = number;
+        measurementsChanged();
+    }
+
+    public int getNumber() {
+        return number;
+    }
+}
+```
+- Observer side
+```
+import java.util.Observable;
+import java.util.Observer;
+
+public class MyObserver implements Observer {
+    Observable observable;
+    private int number;
+
+    public MyObserver(Observable observable) {
+        this.observable = observable;
+        observable.addObserver(this);
+    }
+
+    public void update(Observable obs, Object arg) {
+        if (obs instanceof MyData) {
+            MyData myData = (MyData) obs;
+            this.number = myData.getNumber();
+
+            // Something to execute
+        }
+    }
+}
+```
