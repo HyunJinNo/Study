@@ -11,3 +11,83 @@
   - Uses **inheritance** to decide the object to be instantiated.
   - Defines an interface for creating an object, but lets subclasses decide which class to instantiate.
   - Lets a class defer instantiation to subclasses.
+
+<br>
+
+### How to Use (Example)
+- **Product**
+```
+public abstract class MyProduct {
+    String name;
+
+    public String getName() {
+        return name;
+    }
+}
+```
+
+- **Concrete Products**
+```
+public class ProductA extends MyProduct {
+    public ProductA() {
+        name = "ProductA";
+    }
+}
+
+public class ProductB extends MyProduct {
+    public ProductB() {
+        name = "ProductB";
+    }
+}
+
+public class ProductC extends MyProduct {
+    public ProductC() {
+        name = "ProductC";
+    }
+}
+
+public class ProductD extends MyProduct {
+    public ProductD() {
+        name = "ProductD";
+    }
+}
+```
+
+- **Creator**
+```
+public abstract class MyCreator {
+    public MyProduct orderProduct(String type) {
+        Product product = createProduct(type);
+        return product;
+    }
+
+    protected abstract MyProduct createProduct(String type);
+}
+```
+
+- **Concrete Creators**
+```
+public class CreatorAB extends MyCreator {
+    public MyProduct createProduct(String type) {
+        Product product;
+        if (type.equals("A")) {
+            product = new ProductA();
+        } else if (type.equals("B")) {
+            product = new ProductB();
+        }
+        return product;
+    }
+}
+
+public class CreatorCD extends MyCreator {
+    public MyProduct createProduct(String type) {
+        Product product;
+        if (type.equals("C")) {
+            product = new ProductC();
+        } else if (type.equals("D")) {
+            product = new ProductD();
+        }
+        return product;
+    }
+}
+```
