@@ -16,7 +16,10 @@
 <br>
 
 ### How to Use
-- Observable side
+- **Observable (Publisher) side**
+  - To send notifications
+    - Call SetChanged()
+    - Call either notifyObservers() or notifyObservers(Object arg)
 ```
 import java.util.Observable;
 import java.util.Observer;
@@ -41,7 +44,16 @@ public class MyData extends Observable {
     }
 }
 ```
-- Observer side
+
+- **Observer (Subsciber) side**
+  - To become an observer
+    - Implement java.util.Observer interface
+  - To subscribe
+    - Call addObserver() on any Observable object
+  - To unsubscribe
+    - Call deleteObserver()
+  - To get updated
+    - Implement update(Observable o, Object arg)
 ```
 import java.util.Observable;
 import java.util.Observer;
