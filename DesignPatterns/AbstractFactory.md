@@ -71,6 +71,16 @@ public abstract class Product {
 - **Concrete Product**
 ```
 public class MyProduct extends Product {
-    
+    MyIngredientFactory myIngredientFactory;
+
+    public MyProduct(MyIngredientFactory myIngredientFactory) {
+        this.myIngredientFactory = myIngredientFactory;
+    }
+
+    public void prepare() {
+        ingredientA = myIngredientFactory.createIngredientA();
+        ingredientB = myIngredientFactory.createIngredientB();
+        ingredientC = myIngredientFactory.createIngredientC();
+    }
 }
 ```
