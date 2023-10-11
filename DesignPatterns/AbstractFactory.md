@@ -11,3 +11,4 @@
   - Concrete classes should be decoupled from clients.
 - **Characteristics**
   - Delegates object creation to a factory object.
+  - Uses **composition and delegation**.
