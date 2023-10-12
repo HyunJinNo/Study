@@ -13,14 +13,14 @@
 
 ### How to Use (Example)
 - **Command Interface**
-```
+```java
 public interface Command {
     public void execute();
 }
 ```
 
 - **Implementing a command**
-```
+```java
 public class MyCommand implements Command {
     MyReceiver myRecevier;
 
@@ -36,7 +36,7 @@ public class MyCommand implements Command {
 ```
 
 - **Building Invoker**
-```
+```java
 public class MyInvoker {
     Command slot;
 
@@ -54,7 +54,7 @@ public class MyInvoker {
 ```
 
 - **Client Program**
-```
+```java
 public class Main {
     public static void main(String[] args) {
         // Create invoker
