@@ -32,7 +32,7 @@
 
 ### How to Use (Example)
 - **Abstract Factory**
-```
+```java
 public interface IngredientFactory {
     public IngredientA createIngredientA();
     public IngredientB createIngredientB();
@@ -41,7 +41,7 @@ public interface IngredientFactory {
 ```
 
 - **Concrete Factory**
-```
+```java
 public class MyIngredientFactory implements IngredientFactory {
     public IngredientA createIngredientA() {
         return new MyIngredientA();
@@ -58,7 +58,7 @@ public class MyIngredientFactory implements IngredientFactory {
 ```
 
 - **Abstract Product**
-```
+```java
 public abstract class Product {
     IngredientA ingredientA;
     IngredientB ingredientB;
@@ -69,7 +69,7 @@ public abstract class Product {
 ```
 
 - **Concrete Product**
-```
+```java
 public class MyProduct extends Product {
     MyIngredientFactory myIngredientFactory;
 
