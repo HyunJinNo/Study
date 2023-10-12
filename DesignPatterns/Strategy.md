@@ -12,7 +12,7 @@
 <br>
 
 ### How to Use (Example)
-```
+```java
 public interface FlyBehavior {
     public void fly();
 }
@@ -30,7 +30,7 @@ public class FlyNoWay implements FlyBehavior {
 }
 ```
 
-```
+```java
 public abstract class Bird {
     FlyBehavior flyBehavior;
 
@@ -52,7 +52,7 @@ public class MyBird extends Bird {
 }
 ```
 
-```
+```java
 public class Main {
     public static void main(String[] args) {
         Bird myBird = new MyBird();
