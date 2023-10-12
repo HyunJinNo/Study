@@ -16,7 +16,7 @@
 
 ### How to Use (Example)
 - **Product**
-```
+```java
 public abstract class MyProduct {
     String name;
 
@@ -27,7 +27,7 @@ public abstract class MyProduct {
 ```
 
 - **Concrete Products**
-```
+```java
 public class ProductA extends MyProduct {
     public ProductA() {
         name = "ProductA";
@@ -54,7 +54,7 @@ public class ProductD extends MyProduct {
 ```
 
 - **Creator**
-```
+```java
 public abstract class MyCreator {
     public MyProduct orderProduct(String type) {
         Product product = createProduct(type);
@@ -66,7 +66,7 @@ public abstract class MyCreator {
 ```
 
 - **Concrete Creators**
-```
+```java
 public class CreatorAB extends MyCreator {
     public MyProduct createProduct(String type) {
         Product product;
