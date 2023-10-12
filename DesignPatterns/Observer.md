@@ -20,7 +20,7 @@
   - To send notifications
     - Call SetChanged()
     - Call either notifyObservers() or notifyObservers(Object arg)
-```
+```java
 import java.util.Observable;
 import java.util.Observer;
 
@@ -54,7 +54,7 @@ public class MyData extends Observable {
     - Call deleteObserver()
   - To get updated
     - Implement update(Observable o, Object arg)
-```
+```java
 import java.util.Observable;
 import java.util.Observer;
 
