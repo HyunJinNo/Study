@@ -80,4 +80,29 @@ public class Singleton {
   }
   ```
   
-  - Option 3
+  - **Option 3**
+    - Use volatile keyword and double-checked locking
+    - pros: theoretically perfect solution
+    - cons: depending on the compiler (java version)
+  ```java
+  public class Singleton {
+      private volatile static Singleton instance = null;
+
+      // other useful instance variables
+
+      private Singleton() { //... }
+
+      public static Singleton getInstance() {
+          if (instance == null) {
+              synchronized(Singleton.class) {
+                  if (instance == null) {
+                      instance = new Singleton();
+                  }
+              }
+          }
+          return instance;
+      }
+
+      // other useful methods
+  }
+  ```
