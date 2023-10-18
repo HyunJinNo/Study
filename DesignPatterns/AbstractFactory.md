@@ -32,55 +32,55 @@
 
 ### How to Use (Example)
 - **Abstract Factory**
-```java
-public interface IngredientFactory {
-    public IngredientA createIngredientA();
-    public IngredientB createIngredientB();
-    public IngredientC createIngredientC();
-}
-```
+  ```java
+  public interface IngredientFactory {
+      public IngredientA createIngredientA();
+      public IngredientB createIngredientB();
+      public IngredientC createIngredientC();
+  }
+  ```
 
 - **Concrete Factory**
-```java
-public class MyIngredientFactory implements IngredientFactory {
-    public IngredientA createIngredientA() {
-        return new MyIngredientA();
-    }
+  ```java
+  public class MyIngredientFactory implements IngredientFactory {
+      public IngredientA createIngredientA() {
+          return new MyIngredientA();
+      }
 
-    public IngredientB createIngredientB() {
-        return new MyIngredientB();
-    }
+      public IngredientB createIngredientB() {
+          return new MyIngredientB();
+      }
 
-    public IngredientC createIngredientC() {
-        return new MyIngredientC();
-    }
-}
-```
+      public IngredientC createIngredientC() {
+          return new MyIngredientC();
+      }
+  }
+  ```
 
 - **Abstract Product**
-```java
-public abstract class Product {
-    IngredientA ingredientA;
-    IngredientB ingredientB;
-    IngredientC ingredientC;
+  ```java
+  public abstract class Product {
+      IngredientA ingredientA;
+      IngredientB ingredientB;
+      IngredientC ingredientC;
 
-    public abstract void prepare();
-}
-```
+      public abstract void prepare();
+  }
+  ```
 
 - **Concrete Product**
-```java
-public class MyProduct extends Product {
-    MyIngredientFactory myIngredientFactory;
+  ```java
+  public class MyProduct extends Product {
+      MyIngredientFactory myIngredientFactory;
 
-    public MyProduct(MyIngredientFactory myIngredientFactory) {
-        this.myIngredientFactory = myIngredientFactory;
-    }
+      public MyProduct(MyIngredientFactory myIngredientFactory) {
+          this.myIngredientFactory = myIngredientFactory;
+      }
 
-    public void prepare() {
-        ingredientA = myIngredientFactory.createIngredientA();
-        ingredientB = myIngredientFactory.createIngredientB();
-        ingredientC = myIngredientFactory.createIngredientC();
-    }
-}
-```
+      public void prepare() {
+          ingredientA = myIngredientFactory.createIngredientA();
+          ingredientB = myIngredientFactory.createIngredientB();
+          ingredientC = myIngredientFactory.createIngredientC();
+      }
+  }
+  ```
