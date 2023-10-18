@@ -25,3 +25,80 @@
 - **Disadvantages**
   - can generate a lot of small classes (ex. Java I/O)
   - hard to understand if not familiar with the pattern
+
+<br>
+
+### How to Use (Example)
+- **Decorated Class**
+  ```java
+  public abstract class Beverage {
+      protected String description = "Unknown Beverage";
+
+      public String getDescription() {
+          return description;
+      }
+
+      public abstract double cost();
+  }
+
+  public class Espresso extends Beverage {
+      public Espresso() {
+          description = "Espresso";
+      }
+
+      public double cost() {
+          return 1.99;
+      }
+  }
+  ```
+  
+- **Decorator Class**
+  ```java
+  public abstract class CondimentDecorator extends Beverage {
+      protected Beverage beverage;
+
+      public abstract String getDescription();
+  }
+
+  public class Mocha extends CondimentDecorator {
+      public Mocha(Beverage beverage) {
+          this.beverage = beverage;
+      }
+
+      public String getDescription() {
+          return beverage.getDescription() + ", Mocha";
+      }
+
+      public double cost() {
+          return 0.2 + beverage.cost();
+      }
+  }
+
+  public class Whip extends CondimentDecorator {
+      public Mocha(Beverage beverage) {
+          this.beverage = beverage;
+      }
+
+      public String getDescription() {
+          return beverage.getDescription() + ", Whip";
+      }
+
+      public double cost() {
+          return 0.3 + beverage.cost();
+      }
+  }
+  ```
+  
+- **Main**
+  ```java
+  public class Main {
+      public static void main(String args[]) {
+          Beverage beverage = new Espresso();
+          beverage = new Mocha(beverage);
+          beverage = new Mocha(beverage);
+          beverage = new Whip(beverage);
+          System.out.println(beverage.getDescription() + " $" + beverage.cost());
+      }
+  }
+  ```
+  
