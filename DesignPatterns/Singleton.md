@@ -11,6 +11,13 @@
 
 ### How to Use (Example)
 - **For single-thread**
+  - Make the instructor be private
+    - private Singleton() {}
+  - Provide a getInstance() method
+    - public static Singleton getInstance()
+  - Remember the instance once you have created it
+    - private static Singleton instance
+    - if (instance == null) instance = new Singleton();
 ```java
 public class Singleton {
     private static Singleton instance;
