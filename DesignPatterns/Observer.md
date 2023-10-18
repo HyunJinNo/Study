@@ -20,30 +20,30 @@
   - To send notifications
     - Call SetChanged()
     - Call either notifyObservers() or notifyObservers(Object arg)
-```java
-import java.util.Observable;
-import java.util.Observer;
+  ```java
+  import java.util.Observable;
+  import java.util.Observer;
 
-public class MyData extends Observable {
-    private int number;
+  public class MyData extends Observable {
+      private int number;
 
-    public MyData() {}
+      public MyData() {}
 
-    public void measurementsChanged() {
-        setChanged();
-        notifyObservers();
-    }
+      public void measurementsChanged() {
+          setChanged();
+          notifyObservers();
+      }
 
-    public void setMeasurements(int number) {
-        this.number = number;
-        measurementsChanged();
-    }
+      public void setMeasurements(int number) {
+          this.number = number;
+          measurementsChanged();
+      }
 
-    public int getNumber() {
-        return number;
-    }
-}
-```
+      public int getNumber() {
+          return number;
+      }
+  }
+  ```
 
 - **Observer (Subsciber) side**
   - To become an observer
@@ -54,26 +54,26 @@ public class MyData extends Observable {
     - Call deleteObserver()
   - To get updated
     - Implement update(Observable o, Object arg)
-```java
-import java.util.Observable;
-import java.util.Observer;
+  ```java
+  import java.util.Observable;
+  import java.util.Observer;
 
-public class MyObserver implements Observer {
-    Observable observable;
-    private int number;
+  public class MyObserver implements Observer {
+      Observable observable;
+      private int number;
 
-    public MyObserver(Observable observable) {
-        this.observable = observable;
-        observable.addObserver(this);
-    }
+      public MyObserver(Observable observable) {
+          this.observable = observable;
+          observable.addObserver(this);
+      }
 
-    public void update(Observable obs, Object arg) {
-        if (obs instanceof MyData) {
-            MyData myData = (MyData) obs;
-            this.number = myData.getNumber();
+      public void update(Observable obs, Object arg) {
+          if (obs instanceof MyData) {
+              MyData myData = (MyData) obs;
+              this.number = myData.getNumber();
 
-            // Something to execute
-        }
-    }
-}
-```
+              // Something to execute
+          }
+      }
+  }
+  ```
