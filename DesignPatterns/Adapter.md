@@ -19,3 +19,58 @@
   - Converts the interface of a class into another interface clients expect.
   - Lets classes work together that couldn't otherwise because of incompatible interfaces.
   - Class adapter and object adapter
+
+<br>
+
+### How to Use (Example)
+- **Adaptee Interface**
+```java
+public interface Duck {
+    public void quack();
+    public void fly();
+}
+
+public class MallardDuck implements Duck {
+    public void quack() {
+        System.out.println("Quack.");
+    }
+    public void fly() {
+        System.out.println("I'm flying.");
+    }
+}
+```
+
+- **Target Interface**
+```java
+public interface Turkey {
+    public void gobble();
+    public void fly();
+}
+
+public class WildTurkey implements Turkey {
+    public void gobble() {
+        System.out.println("Gobble.");
+    }
+    public void fly() {
+        System.out.println("I'm flying.");
+    }
+}
+```
+
+- **Object Adapter**
+```java
+public class TurkeyAdapter implements Duck {
+    Turkey turkey;
+    public TurkeyAdapter(Turkey turkey) {
+        this.turkey = turkey;
+    }
+    public void quack() {
+        turkey.gobble();
+    }
+    public void fly() {
+        for (int i = 0; i < 5; i++) {
+            turkey.fly();
+        }
+    }
+}
+```
