@@ -21,28 +21,27 @@
 
 ### How to Use (Example)
 - **A set of interfaces**
-```java
-public class Class1 {
-    public void doSomething() {
-        System.out.print("Hello, ");
-    }
-}
-public class Class2 {
-    public void doSomething() {
-        System.out.print("World!");
-    }
-}
-
-```
+  ```java
+  public class Class1 {
+      public void doSomething() {
+          System.out.print("Hello, ");
+      }
+  }
+  public class Class2 {
+      public void doSomething() {
+          System.out.print("World!");
+      }
+  }
+  ```
 
 - **Façade**
-```java
-public class MyClass {
-    public void doSomething() {
-        Class1 c1 = new Class1();
-        Class2 c2 = new Class2();
-        c1.doSomething();
-        c2.doSomething();
-    }
-}
-```
+  ```java
+  public class MyClass {
+      public void doSomething() {
+          Class1 c1 = new Class1();
+          Class2 c2 = new Class2();
+          c1.doSomething();
+          c2.doSomething();
+      }
+  }
+  ```
