@@ -6,3 +6,31 @@
 - **Use When**
   - Exactly one instance of a class is required.
   - Controlled access to a single object is neccessary.
+
+<br>
+
+### How to Use (Example)
+- **For single-thread**
+```java
+public class Singleton {
+    private static Singleton instance;
+
+    // other useful instance variables;
+
+    private Singleton() { //... }
+
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // other useful methods
+}
+```
+
+- **For multi-thread**
+  - Option 1
+  - Option 2
+  - Option 3
