@@ -16,3 +16,33 @@
     - makes the subsystem easier to use
   - Promotes weak coupling between the subsystem and its clients
     - allows changing the classes comprising the subsystem without affecting the clients
+
+<br>
+
+### How to Use (Example)
+- **A set of interfaces**
+```java
+public class Class1 {
+    public void doSomething() {
+        System.out.print("Hello, ");
+    }
+}
+public class Class2 {
+    public void doSomething() {
+        System.out.print("World!");
+    }
+}
+
+```
+
+- **Façade**
+```java
+public class MyClass {
+    public void doSomething() {
+        Class1 c1 = new Class1();
+        Class2 c2 = new Class2();
+        c1.doSomething();
+        c2.doSomething();
+    }
+}
+```
