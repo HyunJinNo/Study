@@ -13,3 +13,73 @@
   - Multiple or concurrent traversals of the elements are needed.
   - A uniform interface for traversal is needed.
   - Subtle differences exist between the implementation details of various iterators.
+
+<br>
+
+### How to Use (Example)
+```java
+public class MenuItem {
+    String name;
+    String description;
+    boolean vegetarian;
+    double price;
+
+    public MenuItem(String name, String description, boolean vegetarian, double price) {
+        this.name = name;
+        this.description = description;
+        this.vegetarian = vegatarian;
+        this.price = price;
+    }
+}
+```
+
+```java
+public interface Menu {
+    public Iterator createIterator();
+}
+```
+
+```java
+public class DinerMenu implements Menu {
+    MenuItem[] menuItems;
+
+    @Override
+    public Iterator createIterator() {
+        return new DinerMenuIterator(menuItems);
+    }
+}
+```
+
+```java
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator {
+    MenuItem[] items;
+    int position;
+
+    public DinerMenuIterator(MenuItem[] items) {
+        this.items = items;
+        position = 0;
+    }
+
+    @Override
+    public Object next() {
+        MenuItem menuItem = items[position];
+        position++;
+        return menuItem;
+    }
+
+    @Override
+    public boolea hasNext() {
+        if (position >= items.length)
+            return false;
+        else
+            return true;
+    }
+
+    @Override
+    public void remove() {
+        // code for removing an item and shifting the rest
+    }
+}
+```
