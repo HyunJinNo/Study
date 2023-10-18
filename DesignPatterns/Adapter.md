@@ -15,3 +15,7 @@
   - A toolkit or class library may have an interface which is incompatible with an application's interface we want to integrate.
   - It's possible that we don't have access to the source code of the toolkit or library.
   - Even if the source code is available, we may want to minimize the change.
+- **Summary**
+  - Converts the interface of a class into another interface clients expect.
+  - Lets classes work together that couldn't otherwise because of incompatible interfaces.
+  - Class adapter and object adapter
