@@ -13,63 +13,63 @@
 
 ### How to Use (Example)
 - **Command Interface**
-```java
-public interface Command {
-    public void execute();
-}
-```
+  ```java
+  public interface Command {
+      public void execute();
+  }
+  ```
 
 - **Implementing a command**
-```java
-public class MyCommand implements Command {
-    MyReceiver myRecevier;
+  ```java
+  public class MyCommand implements Command {
+      MyReceiver myRecevier;
 
-    public MyCommand(MyReceiver myReceiver) {
-        this.myReceiver = myReceiver;
-    }
+      public MyCommand(MyReceiver myReceiver) {
+          this.myReceiver = myReceiver;
+      }
 
-    public void execute() {
-        // Call a method of myReceiver
-        // ex. myReceiver.work();
-    }
-}
-```
+      public void execute() {
+          // Call a method of myReceiver
+          // ex. myReceiver.work();
+      }
+  }
+  ```
 
 - **Building Invoker**
-```java
-public class MyInvoker {
-    Command slot;
+  ```java
+  public class MyInvoker {
+      Command slot;
 
-    public MyInvoker() {}
+      public MyInvoker() {}
 
-    public void setCommand(Command command) {
-        slot = command;
-    }
+      public void setCommand(Command command) {
+          slot = command;
+      }
 
-    // Use your own method
-    public void buttonPressed() {
-        slot.execute();
-    }
-}
-```
+      // Use your own method
+      public void buttonPressed() {
+          slot.execute();
+      }
+  }
+  ```
 
 - **Client Program**
-```java
-public class Main {
-    public static void main(String[] args) {
-        // Create invoker
-        MyInvoker myInvoker = new MyInvoker();
+  ```java
+  public class Main {
+      public static void main(String[] args) {
+          // Create invoker
+          MyInvoker myInvoker = new MyInvoker();
 
-        // Create receiver
-        MyReceiver myReceiver = new MyReceiver();
+          // Create receiver
+          MyReceiver myReceiver = new MyReceiver();
 
-        // Create command
-        MyCommand myCommand = new MyCommand(myReceiver);
+          // Create command
+          MyCommand myCommand = new MyCommand(myReceiver);
 
-        // linking the invoker with the command
-        myInvoker.setCommand(myCommand);
+          // linking the invoker with the command
+          myInvoker.setCommand(myCommand);
 
-        myInvoker.buttonPressed();
-    }
-}
-```
+          myInvoker.buttonPressed();
+      }
+  }
+  ```
