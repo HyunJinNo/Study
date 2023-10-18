@@ -38,6 +38,46 @@ public class Singleton {
 ```
 
 - **For multi-thread**
-  - Option 1
-  - Option 2
+  - **Option 1**
+    - Use **synchronized** keyword
+      - public static synchronized Singleton getInstance()
+    - cons: Too much locking
+  ```java
+  public class Singleton {
+      private static Singleton instance;
+
+      // other useful instance variables
+
+      private Singleton() { //... }
+
+      public static synchronized Singleton getInstance() {
+          if (instance == null) {
+              instance = new Singleton();
+          }
+          return instance;
+      }
+
+      // other useful methods
+  }
+  ```
+  
+  - **Option 2**
+    - pros: no runtime overhead
+    - cons: resource overhead when the instance is not used
+  ```java
+  public class Singleton {
+      private static Singleton instance = new Singleton();
+
+      // other useful instance variables
+
+      private Singleton() { //... }
+
+      public static Singleton getInstance() {
+          return instance;
+      }
+
+      // other useful methods
+  }
+  ```
+  
   - Option 3
