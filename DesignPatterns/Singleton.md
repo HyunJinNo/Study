@@ -83,7 +83,7 @@ public class Singleton {
   - **Option 3**
     - Use volatile keyword and double-checked locking
     - pros: theoretically perfect solution
-    - cons: depending on the compiler (java version)
+    - cons: dependent on the compiler (java version)
   ```java
   public class Singleton {
       private volatile static Singleton instance = null;
