@@ -41,7 +41,7 @@ public class Singleton {
   - **Option 1**
     - Use **synchronized** keyword
       - public static synchronized Singleton getInstance()
-    - cons: It causes small impact on run-time performance due to frequent locking.
+    - Cons: It causes small impact on run-time performance due to frequent locking.
   ```java
   public class Singleton {
       private static Singleton instance;
@@ -62,8 +62,8 @@ public class Singleton {
   ```
   
   - **Option 2**
-    - pros: no runtime overhead
-    - cons: resource overhead when the instance is not used
+    - Pros: no runtime overhead
+    - Cons: resource overhead when the instance is not used
   ```java
   public class Singleton {
       private static Singleton instance = new Singleton();
@@ -82,8 +82,8 @@ public class Singleton {
   
   - **Option 3**
     - Use volatile keyword and double-checked locking
-    - pros: theoretically perfect solution with respect to performance
-    - cons: dependent on the java version (We have to ensure that we are running at least Java 5)
+    - Pros: theoretically perfect solution with respect to performance
+    - Cons: dependent on the java version (We have to ensure that we are running at least Java 5)
   ```java
   public class Singleton {
       private volatile static Singleton instance = null;
