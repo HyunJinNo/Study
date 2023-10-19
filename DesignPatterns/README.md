@@ -19,7 +19,7 @@
               [Façade](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Façade.md),
               Flyweight,
               Proxy
-- **Behavior**
+- **Behavioral**
   - Address problems of assigning responsibilities to classes
   - Suggest both static relationships and patterns of communication
     - Class: Interpreter, Template
