@@ -23,7 +23,7 @@
 <br>
 
 ### How to Use (Example)
-- **Adaptee Interface**
+- **Target Interface**
   ```java
   public interface Duck {
       public void quack();
@@ -40,7 +40,7 @@
   }
   ```
 
-- **Target Interface**
+- **Adaptee Interface**
   ```java
   public interface Turkey {
       public void gobble();
@@ -60,7 +60,7 @@
 - **Object Adapter**
   ```java
   public class TurkeyAdapter implements Duck {
-      Turkey turkey;
+      Turkey turkey; // adaptee
       public TurkeyAdapter(Turkey turkey) {
           this.turkey = turkey;
       }
