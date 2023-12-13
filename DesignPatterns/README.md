@@ -13,7 +13,7 @@
   - Address problems of using OO constructs like inheritance to organize classes and objects
     - Class: [Adapter](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Adapter.md)
     - Object: [Adapter](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Adapter.md),
-              Bridge,
+              [Bridge](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Bridge.md),
               Composite,
               [Decorator](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Decorator.md),
               [Façade](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Façade.md),
