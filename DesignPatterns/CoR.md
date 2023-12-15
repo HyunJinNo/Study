@@ -46,7 +46,7 @@
 - **Handler**
   ```java
   public abstract class Handler {
-      proteced Handler successor;
+      protected Handler successor;
   
       public void setSuccessor(Handler successor) {
           this.successor = successor;
