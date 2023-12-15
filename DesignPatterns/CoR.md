@@ -21,7 +21,7 @@
 ### Participants
 - **Handler**
   - defines an interface for handling the requests
-  - (optinonal) implements the successor link
+  - (optional) implements the successor link
 - **Concrete Handler**
   - handles requests it it responsible for
   - can access its successor
