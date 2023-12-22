@@ -14,7 +14,7 @@
     - Class: [Adapter](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Adapter.md)
     - Object: [Adapter](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Adapter.md),
               [Bridge](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Bridge.md),
-              Composite,
+              [Composite](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Composite.md),
               [Decorator](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Decorator.md),
               [Façade](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Façade.md),
               Flyweight,
