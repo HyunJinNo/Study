@@ -22,17 +22,67 @@
 ### How to Use (Example)
 - **State**
   ```Java
-  public class State {
-      public State() {
-      }
+  public interface State {
+      public void work();
   }
   ```
 - **Concrete State**
+  ```Java
+  public class WorkingState implements State {
+      public Person person;
+
+      public WorkingState(Person person) {
+          this.person = person;
+      }
+
+      @Override
+      public void work() {
+          System.out.println("I'm working!");
+          person.setState(person.getRestingState());
+      }
+  }
+  ```
+  ```Java
+  public class RestingState implements State {
+      public Person person;
+
+      public RestingState(Person person) {
+          this.person = person;
+      }
+
+      @Override
+      public void work() {
+          System.out.println("I'm resting!");
+          person.setState(person.getWorkingState());
+      }
+  }
+  ```
 - **Client**
   ```Java
   public class Person {
+      private State workingState;
+      private State restingState;
+      private State state = workingState;
+  
       public Person() {
-          
+          workingState = new WorkingState(this);
+          restingState = new RestingState(this);
+      }
+
+      public void setState(State state) {
+          this.state = state;
+      }
+
+      public State getWorkingState() {
+          return workingState;
+      }
+
+      public State getRestingState() {
+          return restingState;
+      }
+
+      public void work() {
+          state.work();
       }
   }
   ```
