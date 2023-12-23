@@ -16,6 +16,18 @@
   - The client object can delegate to the state object that represents the current state
 - **Favor composition over inheritance**
 - **Get rid of** all of our **conditional code** and instead delegate to the state object to do the work for us.
+- Localized the **behavior of each state** into its own class
+- **Removed** all the troublesome **conditional statements** that would have been difficult to maintain
+- **Closed each state for modification**, and yet left the client open to extension by adding new state classe
+- The State Pattern **allows an object to alter its behavior when its internal state changes**. The object will appear to change its class.
+- An object's behavior depends on its state, and it **must change its behavior at run-time depending on that state**.
+- Pros and Cons
+  - Pros
+    - Puts all behavior associated with a state into one object
+    - Allows state transition logic to be incorporated into a state object rather than in a monolithic if or switch statement
+    - Helps avoid inconsistent states since state changes occur using just the one state object and not several objects or attributes
+  - Cons
+    - Increased number of objects
 
 <br>
 
