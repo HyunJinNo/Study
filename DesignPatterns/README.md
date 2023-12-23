@@ -29,6 +29,6 @@
               [Mediator](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Mediator.md),
               Memento,
               [Observer](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Observer.md),
-              State,
+              [State](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/State.md),
               [Strategy](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Strategy.md),
               Visitor
