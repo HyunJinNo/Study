@@ -6,7 +6,7 @@
   - Separate creation from operation/use
     - Class: [Factory Method](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/FactoryMethod.md)
     - Object: [Abstract Factory](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/AbstractFactory.md),
-              Builder,
+              [Builder](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Builder.md),
               Prototype,
               [Singleton](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Singleton.md)
 - **Structural**
