@@ -22,7 +22,7 @@
 - **Behavioral**
   - Address problems of assigning responsibilities to classes
   - Suggest both static relationships and patterns of communication
-    - Class: Interpreter, Template
+    - Class: Interpreter, [Template](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/TemplateMethod.md)
     - Object: [CoR](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/CoR.md),
               [Command](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Command.md),
               [Iterator](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Iterator.md),
