@@ -12,4 +12,27 @@
 
 <br>
 
+### Characteristics
+- **Advantage**
+  - **Hides concrete product classes from clients**
+  - **Decouples the clients from the creational process**
+- Prototypes can be **supplied and changed at runtime**
+- It provides **great flexibility** in configuring and changing a program at runtime
+  - Adding and removing products at run-time
+  - Reduced subclassing
+  - Configuring an application with classes **dynamically**
+    - Loading the classes dynamically
+
+<br>
+
+### Participants
+- **Prototype**
+  - Defines the interface (an operation) of cloning itself.
+- **ConcreteProduct**
+  - Concrete objects that can clone themselves.
+- **Client**
+  - Obtain more objects by asking them to clone themselves.
+
+<br>
+
 ### How to Use (Example)
