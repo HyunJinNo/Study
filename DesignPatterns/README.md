@@ -7,7 +7,7 @@
     - Class: [Factory Method](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/FactoryMethod.md)
     - Object: [Abstract Factory](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/AbstractFactory.md),
               [Builder](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Builder.md),
-              Prototype,
+              [Prototype](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Prototype.md),
               [Singleton](https://github.com/HyunJinNo/Study/blob/main/DesignPatterns/Singleton.md)
 - **Structural**
   - Address problems of using OO constructs like inheritance to organize classes and objects
