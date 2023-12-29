@@ -49,3 +49,102 @@
 <br>
 
 ### How to Use (Example)
+- **Visitor**
+  ```Java
+  public interface ICarElementVisitor {
+      public void visit(Wheel wheel);
+      public void visit(Engine engine);
+      public void visit(Body body);
+      public void visit(Car car);
+  }
+  ```
+- **ConcreteVisitor**
+  ```Java
+  public class CarElementPrintVisitor implements ICarElementVisitor {
+      public void visit(Wheel wheel) {
+          System.out.println("Visiting " + wheel.getName() + " wheel");
+      }
+      public void visit(Engine wheel) {
+          System.out.println("Visiting engine");
+      }
+      public void visit(Body body) {
+          System.out.println("Visiting body");
+      }
+      public void visit(Car car) {
+          System.out.println("Visiting car");
+      }
+  }
+  ```
+  ```Java
+  public class CarElementDoVisitor implements ICarElementVisitor {
+      public void visit(Wheel wheel) {
+          System.out.println("Kicking my " + wheel.getName() + " wheel");
+      }
+      public void visit(Engine wheel) {
+          System.out.println("Starting my engine");
+      }
+      public void visit(Body body) {
+          System.out.println("Moving my body");
+      }
+      public void visit(Car car) {
+          System.out.println("Starting my car");
+      }
+  }
+  ```
+- **Element**
+  ```Java
+  public interface ICarElement {
+      public void accept(ICarElementVisitor visitor);
+  }
+  ```
+- **ConcreteElement**
+  ```Java
+  public class Wheel implements ICarElement {
+      private String name;
+  
+      public Wheel(String name) {
+          this.name = name;
+      } 
+
+      public String getName() {
+          return this.name;
+      }
+
+      @Override
+      public void accept(ICarElementVisitor visitor) {
+          visitor.visit(this);
+      }
+  }
+  ```
+  ```Java
+  public class Engine implements ICarElement {
+      @Override
+      public void accept(ICarElementVisitor visitor) {
+          visitor.visit(this);
+      }
+  }
+  ```
+  ```Java
+  public class Body implements ICarElement {
+      @Override
+      public void accept(ICarElementVisitor visitor) {
+          visitor.visit(this);
+      }
+  }
+  ```
+  ```Java
+  public class Car implements ICarElement {
+      private ICarElement[] elements;
+      public Car() {
+          this.elements = new ICarElement[] { 
+              new Wheel("front left"), new Wheel("front right"),  
+              new Wheel("back left") , new Wheel("back right"), 
+              new Body(), new Engine() }; 
+      }
+      public void accept(ICarElementVisitor visitor) {    
+          for(ICarElement elem : elements) 
+              elem.accept(visitor);
+          visitor.visit(this);
+      }
+  }
+  ```
