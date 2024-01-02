@@ -1,6 +1,8 @@
 # Abstract Factory Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Provide an **interface that delegates creation calls** to one or more concrete classes in order to deliver **specific objects.**
 - **Use When**
@@ -15,7 +17,7 @@
 
 <br>
 
-### Participants
+## Participants
 - **AbstractFactory**
   - Declares an interface for operations that create abstract product objects.
 - **ConcreteFactory**
@@ -30,7 +32,7 @@
  
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Abstract Factory**
   ```java
   public interface IngredientFactory {
