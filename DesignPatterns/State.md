@@ -1,6 +1,8 @@
 # State Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Ties object circumstances to its behavior, allowing the object to **behave in different ways** based upon its **internal state**.
 - **Use When**
@@ -10,7 +12,7 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - **Encapsulate what varies**
   - Put each state’s behavior in its own class, then every state just implements its own actions
   - The client object can delegate to the state object that represents the current state
@@ -31,7 +33,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **State**
   ```Java
   public interface State {
