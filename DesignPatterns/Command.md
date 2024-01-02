@@ -1,6 +1,8 @@
 # Command Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - **Encapsulates a request as an object**
   - This allows the request to be handled in traditionally **object based relationships** such as queuing and callbacks.
@@ -11,7 +13,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Command Interface**
   ```java
   public interface Command {
