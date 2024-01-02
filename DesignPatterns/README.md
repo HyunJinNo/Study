@@ -1,6 +1,8 @@
 # Design Patterns
 
-### Category of GoF Patterns
+<br>
+
+## Category of GoF Patterns
 - **Creational**
   - Address problems of creating an onject in a flexible way
   - Separate creation from operation/use
