@@ -1,6 +1,8 @@
 # Builder Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Allows for the **dynamic creation** of objects based upon **easily interchangeable** algorithms.
 - **Use When**
@@ -11,7 +13,7 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - **Director** knows **what parts are needed** for the final product
 - **Concrete builder** knows **how to produce the part** and **add it** to the final product.
 - A Builder is a Strategy that is specialized to create a composite object or data structure
@@ -19,7 +21,7 @@
 
 <br>
 
-### Participants
+## Participants
 - **Client**
   - selects director and concrete builder to build the product
   - asks concrete builder to return final constructed product
@@ -37,7 +39,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Director**
   ```Java
   public class AerospaceEngineer {
