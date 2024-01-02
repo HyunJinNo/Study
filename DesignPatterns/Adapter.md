@@ -1,6 +1,8 @@
 # Adapter Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **a.k.a**
   - Wrapper
 - **Purpose**
@@ -22,7 +24,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Target Interface**
   ```java
   public interface Duck {
