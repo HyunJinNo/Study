@@ -1,6 +1,8 @@
 # Factory Method Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Exposes a **method for creating objects, allowing subclasses** to control the actual creation process.
 - **Use When**
@@ -14,7 +16,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Product**
   ```java
   public abstract class MyProduct {
