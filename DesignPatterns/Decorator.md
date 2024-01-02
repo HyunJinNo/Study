@@ -1,6 +1,8 @@
 # Decorator Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Allows for the **dynamic wrapping** of objects in order to **modify their existing responsibilities** and behaviors.
 - **Use When**
@@ -28,7 +30,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Decorated Class**
   ```java
   public abstract class Beverage {
