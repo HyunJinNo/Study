@@ -1,6 +1,8 @@
 # Mediator Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Allow loose coupling by **encapsulating the way** disparate sets of objects **interact and communicate** with each other.
 - **Use When**
