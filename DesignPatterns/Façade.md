@@ -1,6 +1,8 @@
 # Façade Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Supplies a single interface to a set of interfaces within a system.
 - **Use When**
@@ -19,7 +21,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **A set of interfaces**
   ```java
   public class Class1 {
