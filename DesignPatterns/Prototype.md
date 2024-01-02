@@ -1,6 +1,8 @@
 # Prototype Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Create objects based upon a template of **an existing objects through cloning.**
 - **Use When**
@@ -12,7 +14,7 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - **Advantage**
   - **Hides concrete product classes from clients**
   - **Decouples the clients from the creational process**
@@ -26,7 +28,7 @@
 
 <br>
 
-### Participants
+## Participants
 - **Prototype**
   - Defines the interface (an operation) of cloning itself.
 - **ConcreteProducts**
@@ -36,7 +38,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Java's Cloneable**
   ```Java
   class Stack implements Cloneable {
