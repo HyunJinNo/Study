@@ -1,6 +1,8 @@
 # Visitor Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - **Allowing one or more operations to be applied to a set of objects at runtime**
   - **Decoupling the operations from the object structure (= the set of objects)**
@@ -13,7 +15,7 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - Pros
   - **Makes adding new operations easy**
     - You can define a new operation simply by adding a new visitor
@@ -32,7 +34,7 @@
 
 <br> 
 
-### Participants
+## Participants
 - **Visitor**
   - declares a visit operation for each class of ConcreteElement in the object structure
 - **ConcreteVisitor**
@@ -48,7 +50,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Visitor**
   ```Java
   public interface ICarElementVisitor {
