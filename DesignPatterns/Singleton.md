@@ -1,6 +1,8 @@
 # Singleton Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Ensures that **only one instance** of a class is allowed within a system.
 - **Use When**
@@ -9,7 +11,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **For single-thread**
   - Make the instructor be private
     - private Singleton() {}
