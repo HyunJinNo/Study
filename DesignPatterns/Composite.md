@@ -1,6 +1,8 @@
 # Composite Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Facilitates the creation of **object hierarchies** where each object can be treated independently or as a set of nested objects through the same interface.
 - **Use When**
@@ -9,7 +11,7 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - composes objects into **tree** structures to represent **whole-part hierarchies**.
 - lets clients **treat** individual objects and compositions of objects **uniformly**.
 - Child Mgt. Interface
@@ -20,7 +22,7 @@
 
 <br>
 
-### Related patterns
+## Related patterns
 - **Composite vs Decorator**
   - Both have similar structure diagrams
     - **recursive composition** to organize an open-ended number of objects
@@ -33,7 +35,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Component**
   ```Java
   public class Component {
