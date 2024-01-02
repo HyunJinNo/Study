@@ -1,6 +1,8 @@
 # Observer patterns
 
-### Introduction
+<br>
+
+## Introduction
 - **a.k.a**
   - Publish/Subscibe model
 - **Purpose**
@@ -15,7 +17,7 @@
 
 <br>
 
-### How to Use
+## How to Use
 - **Observable (Publisher) side**
   - To send notifications
     - Call SetChanged()
