@@ -1,6 +1,8 @@
 # Iterator Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **a.k.a**
   - Cursor
 - **Purpose**
@@ -16,7 +18,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 ```java
 public class MenuItem {
     String name;
