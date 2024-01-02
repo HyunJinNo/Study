@@ -1,6 +1,8 @@
 # Chain of Responsibility Pattern
 
-### Introduction 
+<br>
+
+## Introduction 
 - **Purpose**
   - Gives more than one object an opportunity to handle a request by linking receiving objects together.
 - **Use When**
@@ -10,7 +12,7 @@
 
 <br> 
 
-### Characteristics
+## Characteristics
 - Each object in the chain receives the request and handles it or forwards it to the next object.
 - Object making the request has no knowledge of which object is handling the request.
 - The request has an implicit receiver.
@@ -18,7 +20,7 @@
 
 <br>
 
-### Participants
+## Participants
 - **Handler**
   - defines an interface for handling the requests
   - (optional) implements the successor link
@@ -31,7 +33,7 @@
  
 <br>
 
-### Pros and Cons
+## Pros and Cons
 - **Benefits**
   - Decoupling of senders and receivers
   - Added flexibility
@@ -42,7 +44,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Handler**
   ```java
   public abstract class Handler {
