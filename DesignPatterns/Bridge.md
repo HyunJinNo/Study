@@ -1,6 +1,8 @@
 # Bridge Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Defines an **abstraction object structure** independently of the **implementation object structure** in order to limit coupling.
 - **Use When**
@@ -10,13 +12,13 @@
 
 <br>
 
-### Characteristics
+## Characteristics
 - **Separate** the **variations in abstraction** from the **variations in implementation** so that the number of classes only grows linearly.
 - **Decouples an abstraction from its implementation** so that the two can vary independently.
 
 <br>
 
-### Participants
+## Participants
 - **Abstraction**
   - defines the abstraction's interface
   - maintains a reference to the implementor
@@ -30,7 +32,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 - **Abstraction**
   ```java
   public abstract class Shape {
