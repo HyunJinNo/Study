@@ -1,6 +1,8 @@
 # Strategy Pattern
 
-### Introduction
+<br>
+
+## Introduction
 - **Purpose**
   - Defines a set of encapsulated algorithms that can be swapped to carry out a specific behavior.
 - **Use When**
@@ -11,7 +13,7 @@
 
 <br>
 
-### How to Use (Example)
+## How to Use (Example)
 ```java
 public interface FlyBehavior {
     public void fly();
